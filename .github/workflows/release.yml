@@ -24,7 +24,8 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@v4
 
-      - run: ./gradlew launcherVersion --no-daemon
+      - name: Build
+        run: ./gradlew launcherVersion build --no-daemon
 
       - uses: softprops/action-gh-release@v2
         with:
