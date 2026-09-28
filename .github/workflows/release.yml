@@ -31,6 +31,6 @@ jobs:
           tag_name: ${{ inputs.tag }}
           name: Rise ${{ inputs.tag }}
           body: put it in versions\Rise then start it up
-          files: |
-            build/launcher/Rise/Rise.jar
-            build/launcher/Rise/Rise.json
+          run: |
+            test -f build/launcher/Rise/Rise.jar
+            test -f build/launcher/Rise/Rise.json
